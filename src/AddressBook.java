@@ -2,21 +2,23 @@ import java.util.LinkedList;
 
 public class AddressBook {
 
-    public static BuddyInfo element;
     public static LinkedList<BuddyInfo> BuddyInfoLinkedList= new LinkedList<>();
 
     public static void main(String[] args) {
-        System.out.println("Address Book");
+        BuddyInfo buddy = new BuddyInfo("Tom", "Carleton", "613");
+        AddressBook addressBook = new AddressBook();
+        addressBook.addBuddy(buddy);
+        addressBook.removeBuddy(buddy);
     }
 
-    public static void removeBuddy(){
-        BuddyInfoLinkedList.remove();
+    public static void removeBuddy(BuddyInfo friend){
+        BuddyInfoLinkedList.remove(friend);
 
     }
 
-    public static void addBuddy(){
+    public static void addBuddy(BuddyInfo friend){
 
-        BuddyInfoLinkedList.add(element);
+        BuddyInfoLinkedList.add(friend);
     }
 
 }
