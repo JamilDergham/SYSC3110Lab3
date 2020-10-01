@@ -1,24 +1,29 @@
-import java.util.LinkedList;
+import java.util.ArrayList;
 
 public class AddressBook {
 
-    public static LinkedList<BuddyInfo> BuddyInfoLinkedList= new LinkedList<>();
+    private ArrayList<BuddyInfo> myBuddies;
+    public AddressBook(){
+        myBuddies = new ArrayList<>();
+    }
+
+    public BuddyInfo removeBuddy(int index){
+        if(index >=0 && index < myBuddies.size()){
+            return myBuddies.remove(index);
+        }
+        return null;
+    }
+
+    public  void addBuddy(BuddyInfo friend){
+        if(friend != null){
+            myBuddies.add(friend);
+        }
+    }
 
     public static void main(String[] args) {
         BuddyInfo buddy = new BuddyInfo("Tom", "Carleton", "613");
         AddressBook addressBook = new AddressBook();
         addressBook.addBuddy(buddy);
-        addressBook.removeBuddy(buddy);
+        addressBook.removeBuddy(0);
     }
-
-    public static void removeBuddy(BuddyInfo friend){
-        BuddyInfoLinkedList.remove(friend);
-
-    }
-
-    public static void addBuddy(BuddyInfo friend){
-
-        BuddyInfoLinkedList.add(friend);
-    }
-
 }
