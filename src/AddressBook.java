@@ -1,5 +1,7 @@
 import java.util.LinkedList;
 
+//Testing editing on GitHub
+
 public class AddressBook {
 
     public static LinkedList<BuddyInfo> BuddyInfoLinkedList= new LinkedList<>();
@@ -15,7 +17,7 @@ public class AddressBook {
         BuddyInfoLinkedList.remove(friend);
 
     }
-
+    
     public static void addBuddy(BuddyInfo friend){
 
         BuddyInfoLinkedList.add(friend);
