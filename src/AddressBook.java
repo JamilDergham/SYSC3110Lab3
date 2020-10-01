@@ -17,9 +17,12 @@ public class AddressBook {
         BuddyInfoLinkedList.remove(friend);
 
     }
-    
-    public static void addBuddy(BuddyInfo friend){
 
+    public int newMethod(int number){
+        return number;
+    }
+
+    public static void addBuddy(BuddyInfo friend){
         BuddyInfoLinkedList.add(friend);
     }
 
